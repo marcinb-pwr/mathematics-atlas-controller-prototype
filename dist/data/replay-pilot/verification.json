@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "target": "Nat.Prime.dvd_mul",
+  "fresh_process_replay": "passed",
+  "all_recorded_states_match": true,
+  "target_absent_at_start": true,
+  "failed_actions_restore_full_state": true,
+  "standalone_proof": "passed",
+  "kernel_check_scope": "Lean source elaboration checks this new proof; imported oleans are pinned and trusted. This pilot does not claim a fresh kernel replay of all imported declarations.",
+  "negative_control": "mistyped proof rejected",
+  "checked_proof_output": "'Nat.Prime.dvd_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "allowed_premises_sha256_uncompressed": "bc0ac12003b9b9a9152a70b709002515b95011d82a6e3559745e03d9ae655014",
+  "compiler_ms": 2004,
+  "proof_check_ms": 1617,
+  "sha256": {
+    "AtlasReplay.lean": "db0482caeb214a1c24667bdd62f794f901d4f1078fdfbd1c8fa899f6f340c818",
+    "CheckedProof.lean": "239a7eb5edad218ede17b6dbbbd32ce631064878ae477a37d5700e4eca08a1fd",
+    "Episode.lean": "1c191689b747fe0988d988368c90859c0b04a5d418dc1be346ff41e14dd6a8aa",
+    "allowed-premises.ndjson.gz": "78ea42e0f27eb66a5fbcf8e8af757d3206c7179e7cc669d23a7369588b351524",
+    "environments.ndjson": "f19e02eac89e3bc3621704569488ef77b7049de8e593fabb69015b307226869d",
+    "episodes.ndjson": "4fded5d5532c2ac3b9c0f38283a3750e4d1d4fc73599d1c3a6251b4f6f7e51af",
+    "plan.json": "ef7b80d965e37e183aa2c66d26f8ca824bd53a1e473c5cdde5eb1a09cc7a4b1e",
+    "source-lock.json": "e84e4ccc81f037abbf938041bab07a6d55f97852fb70627be9437836214ce88f",
+    "source-prefix.lean": "30838219a02df254c8cb42994147a2f7587f850794fc2fbe8dae00ce89c43f61",
+    "states.ndjson": "ac3676b85c0ad6406821ff07cf5f6af9eb1e3456c0aa5ec1ea78f49077a9f09d",
+    "trace.json": "3c3dc00370a5c23b15c67457f491762c06cb73ffdfd846af64c96191196435ad",
+    "transitions.ndjson": "2884850237172f137c8d84d9abffa756a81fbcd40bf825f59d95ebe3036bd5d2"
+  }
+}

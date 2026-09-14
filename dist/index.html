@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10203c">
+  <meta name="description" content="Explore connected branches of mathematics from a verified Lean and mathlib snapshot. Inspect shared definitions, statements, proofs, and axioms.">
+  <title>Mathematics Atlas — Across mathematics</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2310203c'/%3E%3Cpath d='M8 23L16 7L24 23M11 17H21' stroke='%237dbeff' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='16' cy='7' r='2.5' fill='%23fff'/%3E%3Ccircle cx='8' cy='23' r='2.5' fill='%23fff'/%3E%3Ccircle cx='24' cy='23' r='2.5' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=math02">
+</head>
+<body>
+  <header class="topbar">
+    <a href="./" class="brand" aria-label="Mathematics Atlas home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 25L16 5L26 25M10 17H22"/><circle cx="16" cy="5" r="2.5"/><circle cx="6" cy="25" r="2.5"/><circle cx="26" cy="25" r="2.5"/></svg><span>ATLAS<span class="brand-sub">MATHEMATICS</span></span></a>
+    <div class="top-context"><span class="edition" id="edition">02</span><span id="corpus-label">Across mathematics</span><span class="divider">/</span><span class="muted-light">Axioms to proofs</span></div>
+    <button class="snapshot-button" id="open-dataset"><span class="receipt-icon" aria-hidden="true">▤</span> Dataset & verification</button>
+  </header>
+  <div id="loading" class="loading-panel" role="status"><span class="loading-mark">∴</span><p>Opening the mathematics atlas…</p></div>
+  <main class="workspace" id="workspace" hidden>
+    <aside class="library-panel" aria-label="Mathematical library">
+      <div class="library-top"><span class="eyebrow">EXPLORE THE CORPUS</span><h1>Mathematics<span class="count-badge" id="seed-count"></span></h1>
+        <label class="assumption-filter branch-filter" for="branch-filter">Branch<select id="branch-filter"><option value="all">All branches</option></select></label>
+        <label class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="search" type="search" placeholder="Find a concept or result" autocomplete="off" aria-label="Search all declarations and concepts"><kbd>/</kbd></label>
+        <div class="topic-filters" id="topics" aria-label="Filter selected results by topic"></div>
+        <label class="assumption-filter" for="assumption-filter">Axiom usage<select id="assumption-filter"><option value="any">Any assumptions</option><option value="none">No named axioms</option><option value="no-choice">Without choice</option><option value="choice">Uses choice</option></select></label>
+      </div>
+      <div class="list-heading"><span id="list-title">SELECTED RESULTS</span><span id="list-count"></span></div>
+      <div class="result-list" id="results" aria-label="Search results"></div>
+      <div class="library-bottom"><span class="edition-line">PINNED EDITION</span><div>Lean <span id="lean-version"></span> <span class="separator">·</span> mathlib <code id="commit-short"></code></div><button id="reset-selection" class="text-button">Return to Euclid’s theorem <span aria-hidden="true">↗</span></button></div>
+    </aside>
+    <section class="graph-panel" aria-label="Dependency explorer">
+      <div class="graph-heading"><div><div class="eyebrow" id="graph-eyebrow">PROOF NEIGHBORHOOD</div><h2 id="graph-title"></h2><p id="graph-subtitle"></p></div><button class="icon-button mobile-library" id="toggle-library" aria-label="Show result library">☰</button></div>
+      <div class="graph-toolbar">
+        <label class="control-field">View<select id="view-mode"><option value="dependencies">Dependencies</option><option value="dependents">Used by</option><option value="axioms">Axiom paths</option><option value="concepts">Concept map</option></select></label>
+        <label class="control-field" id="depth-control">Depth<select id="depth"><option value="1" selected>1 step</option><option value="2">2 steps</option><option value="3">3 steps</option><option value="4">4 steps</option></select></label>
+        <label class="check-control" id="kernel-control"><input type="checkbox" id="show-kernel"><span>Kernel details</span></label>
+        <button id="focus-selected" class="subtle-button" title="Center the graph on the inspected node">Focus inspected</button>
+      </div>
+      <div class="graph-stage" id="graph-stage">
+        <svg id="graph" role="img" aria-label="Interactive mathematical dependency graph"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8b9bb2"/></marker></defs><g id="graph-world"></g></svg>
+        <div id="graph-empty" class="graph-empty" hidden></div>
+        <div class="graph-note" id="graph-note"></div>
+        <div class="zoom-controls"><button id="zoom-out" aria-label="Zoom out">−</button><span id="zoom-level">100%</span><button id="zoom-in" aria-label="Zoom in">+</button><span class="zoom-divider"></span><button id="fit-graph" aria-label="Fit graph to view" title="Fit graph to view"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4M13 3h4v4M3 13v4h4M17 13v4h-4"/></svg></button></div>
+      </div>
+      <footer class="graph-footer"><div class="legend"><span><i class="legend-theorem"></i>Statement</span><span><i class="legend-proof"></i>Proof</span><span><i class="legend-definition"></i>Definition</span><span><i class="legend-axiom"></i>Axiom</span></div><span class="pan-hint">Scroll to zoom · drag to pan</span></footer>
+    </section>
+    <aside class="inspector" aria-label="Selected mathematical object">
+      <div class="inspector-head"><div class="inspector-kicker"><span class="type-badge" id="node-kind"></span><button id="copy-name" class="text-button" title="Copy declaration name">Copy name</button></div><h2 id="node-title"></h2><code class="qualified-name" id="node-name"></code><div id="node-status" class="node-status"></div><div id="node-branches" class="node-branches"></div></div>
+      <div class="inspector-tabs" role="tablist" aria-label="Object details"><button role="tab" aria-selected="true" data-tab="statement" id="tab-statement">Statement</button><button role="tab" aria-selected="false" data-tab="proof" id="tab-proof">Proof</button><button role="tab" aria-selected="false" data-tab="axioms" id="tab-axioms">Assumptions</button><button role="tab" aria-selected="false" data-tab="source" id="tab-source">Source</button></div>
+      <div class="inspector-content" id="inspector-content" role="tabpanel" tabindex="0" aria-labelledby="tab-statement"></div>
+      <div class="inspector-bottom"><span id="dependency-count"></span><button class="text-button" id="inspect-focus">Explore this node <span aria-hidden="true">↗</span></button></div>
+    </aside>
+  </main>
+  <dialog id="dataset-dialog" aria-labelledby="dataset-title"><div class="dialog-head"><div><span class="eyebrow">CORPUS RECEIPT</span><h2 id="dataset-title">Dataset & verification</h2></div><button class="icon-button" id="close-dataset" aria-label="Close dataset details">×</button></div><div id="dataset-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.mjs?v=math02"></script>
+</body>
+</html>

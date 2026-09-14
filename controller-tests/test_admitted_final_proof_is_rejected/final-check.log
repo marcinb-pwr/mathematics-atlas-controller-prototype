@@ -1,0 +1,2 @@
+/workspace/scratch/860c310129be/atlas-controller-v2/.work/tests-v2-final/test_admitted_final_proof_is_rejected/CheckedProof.lean:4:8: warning: declaration uses 'sorry'
+'AtlasRegression.demo' depends on axioms: [sorryAx]

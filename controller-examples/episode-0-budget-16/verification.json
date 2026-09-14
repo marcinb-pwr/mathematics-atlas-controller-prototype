@@ -1,0 +1,12 @@
+{
+  "outcome": "proved",
+  "standalone_check_exit": 0,
+  "axioms_output": "'Nat.irreducible_iff_nat_prime' depends on axioms: [propext]\n",
+  "proof_sha256": "f01aa7b343d723c5a6c3da1b417c2cdc3981a40b93bbc1ec3800a74d3401d561",
+  "winning_actions": [
+    "rfl"
+  ],
+  "winning_action_count": 1,
+  "scope": "New proof elaborated with original imports; pinned compiled imports are trusted.",
+  "main_benchmark_ready": false
+}

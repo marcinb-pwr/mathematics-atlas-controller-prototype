@@ -1,0 +1,15 @@
+{
+  "outcome": "proved",
+  "standalone_check_exit": 0,
+  "axioms_output": "'Finset.disjUnion_eq_union' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "proof_sha256": "088572cca926f9019575c016a60166b305d2822b6a3143743cb50fd47fa9b008",
+  "winning_actions": [
+    "apply Finset.ext",
+    "intro h_atlas_0",
+    "rw [Finset.mem_disjUnion]",
+    "rw [Finset.mem_union]"
+  ],
+  "winning_action_count": 4,
+  "scope": "New proof elaborated with original imports; pinned compiled imports are trusted.",
+  "main_benchmark_ready": false
+}

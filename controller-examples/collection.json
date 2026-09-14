@@ -1,0 +1,196 @@
+{
+  "schema": "atlas-controller-collection/2",
+  "collector_sha256": "0deeba77df57c8e6152d2eb154e5c41ac73ebf5a9f96afd61312c1c9c0d95d50",
+  "controller": "deterministic depth-limited DFS with visible-state duplicate detection",
+  "maximum_depth": 6,
+  "candidate_pipeline": "available-premises-bm25/1 + apply-exact-rewrite/1",
+  "top_k": 12,
+  "split": "engineering_demo",
+  "benchmark_ready": false,
+  "selection_policy": "Six explicit Nat/Finset source-prefix engineering targets; no frozen benchmark splits.",
+  "uses_target_proof": false,
+  "proof_dependency_graph_used": false,
+  "statement_association_graph_used": true,
+  "episodes": [
+    {
+      "directory": "episode-0-budget-16",
+      "target": "Nat.irreducible_iff_nat_prime",
+      "budget": 16,
+      "outcome": "proved",
+      "executed_actions": 2,
+      "rejected_tactics": 1,
+      "winning_actions": [
+        "rfl"
+      ],
+      "wall_elapsed_ns": 5130559294,
+      "initialization_wall_ns": 1576251288,
+      "search_wall_ns": 2823350394,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-0-budget-256",
+      "target": "Nat.irreducible_iff_nat_prime",
+      "budget": 256,
+      "outcome": "proved",
+      "executed_actions": 2,
+      "rejected_tactics": 1,
+      "winning_actions": [
+        "rfl"
+      ],
+      "wall_elapsed_ns": 2346890711,
+      "initialization_wall_ns": 1212544526,
+      "search_wall_ns": 49555827,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-1-budget-16",
+      "target": "Nat.Prime.ne_zero",
+      "budget": 16,
+      "outcome": "budget_exhausted",
+      "executed_actions": 16,
+      "rejected_tactics": 14,
+      "winning_actions": null,
+      "wall_elapsed_ns": 4812854475,
+      "initialization_wall_ns": 1585008909,
+      "search_wall_ns": 3195810726,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-1-budget-256",
+      "target": "Nat.Prime.ne_zero",
+      "budget": 256,
+      "outcome": "proved",
+      "executed_actions": 21,
+      "rejected_tactics": 17,
+      "winning_actions": [
+        "intro h_atlas_0",
+        "apply Nat.prime_zero_false",
+        "rw [\u2190 h_atlas_0]",
+        "assumption"
+      ],
+      "wall_elapsed_ns": 2656342168,
+      "initialization_wall_ns": 1299567934,
+      "search_wall_ns": 404692359,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-2-budget-16",
+      "target": "Finset.disjUnion_eq_union",
+      "budget": 16,
+      "outcome": "budget_exhausted",
+      "executed_actions": 16,
+      "rejected_tactics": 14,
+      "winning_actions": null,
+      "wall_elapsed_ns": 5197449623,
+      "initialization_wall_ns": 1371454561,
+      "search_wall_ns": 3810267309,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-2-budget-256",
+      "target": "Finset.disjUnion_eq_union",
+      "budget": 256,
+      "outcome": "proved",
+      "executed_actions": 31,
+      "rejected_tactics": 27,
+      "winning_actions": [
+        "apply Finset.ext",
+        "intro h_atlas_0",
+        "rw [Finset.mem_disjUnion]",
+        "rw [Finset.mem_union]"
+      ],
+      "wall_elapsed_ns": 3408831136,
+      "initialization_wall_ns": 1311218083,
+      "search_wall_ns": 1241949749,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-3-budget-16",
+      "target": "Finset.erase_empty",
+      "budget": 16,
+      "outcome": "proved",
+      "executed_actions": 2,
+      "rejected_tactics": 1,
+      "winning_actions": [
+        "rfl"
+      ],
+      "wall_elapsed_ns": 5794780926,
+      "initialization_wall_ns": 1602425028,
+      "search_wall_ns": 3082627266,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-3-budget-256",
+      "target": "Finset.erase_empty",
+      "budget": 256,
+      "outcome": "proved",
+      "executed_actions": 2,
+      "rejected_tactics": 1,
+      "winning_actions": [
+        "rfl"
+      ],
+      "wall_elapsed_ns": 2955359083,
+      "initialization_wall_ns": 1702311104,
+      "search_wall_ns": 140094098,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-4-budget-16",
+      "target": "Nat.Prime.pos",
+      "budget": 16,
+      "outcome": "budget_exhausted",
+      "executed_actions": 16,
+      "rejected_tactics": 16,
+      "winning_actions": null,
+      "wall_elapsed_ns": 118105736310,
+      "initialization_wall_ns": 114560365528,
+      "search_wall_ns": 3526433801,
+      "inventory_cache": "miss"
+    },
+    {
+      "directory": "episode-4-budget-256",
+      "target": "Nat.Prime.pos",
+      "budget": 256,
+      "outcome": "abandoned",
+      "executed_actions": 38,
+      "rejected_tactics": 38,
+      "winning_actions": null,
+      "wall_elapsed_ns": 2025352811,
+      "initialization_wall_ns": 1471216869,
+      "search_wall_ns": 535814729,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-5-budget-16",
+      "target": "Finset.disjoint_union_left",
+      "budget": 16,
+      "outcome": "budget_exhausted",
+      "executed_actions": 16,
+      "rejected_tactics": 16,
+      "winning_actions": null,
+      "wall_elapsed_ns": 129618405574,
+      "initialization_wall_ns": 125878266386,
+      "search_wall_ns": 3721664174,
+      "inventory_cache": "miss"
+    },
+    {
+      "directory": "episode-5-budget-256",
+      "target": "Finset.disjoint_union_left",
+      "budget": 256,
+      "outcome": "budget_exhausted",
+      "executed_actions": 256,
+      "rejected_tactics": 247,
+      "winning_actions": null,
+      "wall_elapsed_ns": 23548516189,
+      "initialization_wall_ns": 1682383938,
+      "search_wall_ns": 21834046358,
+      "inventory_cache": "hit"
+    }
+  ],
+  "recollected_episodes": [
+    {
+      "directory": "episode-5-budget-256",
+      "reason": "The first attempt had a complete controller-memory ledger but an incomplete redundant observations.ndjson view. Recollected in a fresh process; complete views checked before packaging."
+    }
+  ]
+}

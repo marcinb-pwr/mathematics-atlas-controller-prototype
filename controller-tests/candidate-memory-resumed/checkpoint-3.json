@@ -1,0 +1,559 @@
+{
+  "schema": "atlas-controller-session/2",
+  "environment": {
+    "declaration": "theorem demo (p : Prop) (h : p) : p ∧ True",
+    "prefix": "import Lean\nnamespace AtlasRegression\n",
+    "provenance": {
+      "kind": "synthetic_regression"
+    },
+    "suffix": "\nend AtlasRegression\n",
+    "target": "AtlasRegression.demo"
+  },
+  "source_lock": {
+    "mathlib_repository": "https://github.com/leanprover-community/mathlib4",
+    "mathlib_ref": "v4.19.0",
+    "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "lean_toolchain": "leanprover/lean4:v4.19.0",
+    "lean_commit": "6caaee842e9495688c1567e78c0e68dbb96942aa",
+    "lean_version": "4.19.0",
+    "lean_archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+    "snapshot_id": "mathlib-c44e0c8ee63ca166450922a373c7409c5d26b00b-math02",
+    "packages": [
+      {
+        "url": "https://github.com/leanprover-community/plausible",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "name": "plausible",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "name": "LeanSearchClient",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/import-graph",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "name": "importGraph",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "c4919189477c3221e6a204008998b0d724f49904",
+        "name": "proofwidgets",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v0.0.57",
+        "inherited": false,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/aesop",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "name": "aesop",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "master",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/quote4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "name": "Qq",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "master",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/batteries",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "name": "batteries",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover/lean4-cli",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover",
+        "rev": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "name": "Cli",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      }
+    ]
+  },
+  "recorder_sha256": "8f57aeca886bdf4a9129a8695233ac57474bfd66c8739fe2af627d90bfaee49f",
+  "stop_after_event": 3,
+  "commands": [
+    {
+      "op": "step",
+      "action": "constructor"
+    },
+    {
+      "op": "snapshot"
+    },
+    {
+      "op": "step",
+      "action": "assumption"
+    },
+    {
+      "op": "snapshot"
+    }
+  ],
+  "response_fingerprints": [
+    "a447392c2bc5801a96681d3092fe74ae1716f4d68a1bba4bf19554c62c5dbd27",
+    "5df28753f17d542e0024dd70dd0ae5597828c843bf6688f693ecee627de65260",
+    "f643085a51410e115d579f7a13f3e700331be7622201943a4716d6907290dfef",
+    "aec5b48647496319ad27e2203282b502e1af8b6e5f912f2d47a0166ff896c417"
+  ],
+  "history_sha256": "5c03aad2efee5378eb3e5b304e33d2ce8d350bed6f8111b6f143efe984f8dfeb",
+  "initial_snapshot_sha256": "a745171c2ff704ceede38eb9edc301e57555493e7a68425de8e069789f3df4b5",
+  "controller_memory": [
+    {
+      "budget": {
+        "action_timeout_seconds": 0.5,
+        "max_actions": 64
+      },
+      "event_index": -1,
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [],
+        "remaining_actions": 64,
+        "remaining_wall_seconds": 59.35128958400128,
+        "schema": "atlas-observation/1",
+        "state_id": "s0",
+        "terminal_outcome": null
+      },
+      "phase": "initial"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 0.5,
+        "max_actions": 64
+      },
+      "candidates": [
+        {
+          "action": "constructor",
+          "id": "c0",
+          "outcome": null,
+          "premise": null
+        },
+        {
+          "action": "rfl",
+          "id": "c1",
+          "outcome": null,
+          "premise": null
+        }
+      ],
+      "event_index": 0,
+      "generator": {
+        "name": "regression-candidates/1"
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [],
+        "remaining_actions": 64,
+        "remaining_wall_seconds": 59.3499124709997,
+        "schema": "atlas-observation/1",
+        "state_id": "s0",
+        "terminal_outcome": null
+      },
+      "phase": "before_action"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 0.5,
+        "max_actions": 64
+      },
+      "event_index": 0,
+      "feedback": {
+        "action": "constructor",
+        "chosen_id": "c0",
+        "error": null,
+        "operation": "step",
+        "parent_event_index": null,
+        "previous_event_index": null,
+        "tactic_acceptance": "accepted"
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p"
+          },
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "True"
+          }
+        ],
+        "history": [
+          {
+            "action": "constructor",
+            "error": null,
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "accepted"
+          }
+        ],
+        "remaining_actions": 63,
+        "remaining_wall_seconds": 59.3411304479996,
+        "schema": "atlas-observation/1",
+        "state_id": "s1",
+        "terminal_outcome": null
+      },
+      "phase": "feedback"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 0.5,
+        "max_actions": 64
+      },
+      "event_index": 1,
+      "feedback": {
+        "operation": "snapshot",
+        "parent_event_index": 0,
+        "previous_event_index": 0
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p"
+          },
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "True"
+          }
+        ],
+        "history": [
+          {
+            "action": "constructor",
+            "error": null,
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "accepted"
+          },
+          {
+            "event_index": 1,
+            "operation": "snapshot"
+          }
+        ],
+        "remaining_actions": 63,
+        "remaining_wall_seconds": 59.3391585570007,
+        "schema": "atlas-observation/1",
+        "state_id": "s1",
+        "terminal_outcome": null
+      },
+      "phase": "feedback"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 0.75,
+        "max_actions": 99
+      },
+      "candidates": null,
+      "event_index": 2,
+      "generator": null,
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p"
+          },
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "True"
+          }
+        ],
+        "history": [
+          {
+            "action": "constructor",
+            "error": null,
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "accepted"
+          },
+          {
+            "event_index": 1,
+            "operation": "snapshot"
+          }
+        ],
+        "remaining_actions": 98,
+        "remaining_wall_seconds": 58.86832297399815,
+        "schema": "atlas-observation/1",
+        "state_id": "s1",
+        "terminal_outcome": null
+      },
+      "phase": "before_action"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 0.75,
+        "max_actions": 99
+      },
+      "event_index": 2,
+      "feedback": {
+        "action": "assumption",
+        "chosen_id": null,
+        "error": null,
+        "operation": "step",
+        "parent_event_index": 0,
+        "previous_event_index": 1,
+        "tactic_acceptance": "accepted"
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "True"
+          }
+        ],
+        "history": [
+          {
+            "action": "constructor",
+            "error": null,
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "accepted"
+          },
+          {
+            "event_index": 1,
+            "operation": "snapshot"
+          },
+          {
+            "action": "assumption",
+            "error": null,
+            "event_index": 2,
+            "operation": "step",
+            "tactic_acceptance": "accepted"
+          }
+        ],
+        "remaining_actions": 97,
+        "remaining_wall_seconds": 58.866180291999626,
+        "schema": "atlas-observation/1",
+        "state_id": "s2",
+        "terminal_outcome": null
+      },
+      "phase": "feedback"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 0.75,
+        "max_actions": 99
+      },
+      "event_index": 3,
+      "feedback": {
+        "operation": "snapshot",
+        "parent_event_index": 2,
+        "previous_event_index": 2
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "True"
+          }
+        ],
+        "history": [
+          {
+            "action": "constructor",
+            "error": null,
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "accepted"
+          },
+          {
+            "event_index": 1,
+            "operation": "snapshot"
+          },
+          {
+            "action": "assumption",
+            "error": null,
+            "event_index": 2,
+            "operation": "step",
+            "tactic_acceptance": "accepted"
+          },
+          {
+            "event_index": 3,
+            "operation": "snapshot"
+          }
+        ],
+        "remaining_actions": 97,
+        "remaining_wall_seconds": 58.86473326099804,
+        "schema": "atlas-observation/1",
+        "state_id": "s2",
+        "terminal_outcome": null
+      },
+      "phase": "feedback"
+    }
+  ],
+  "controller_memory_sha256": "7b7cd01bab4eef46391ed6de9fab872de2f66df0ee2e348ec5731129f668e6e3",
+  "snapshot_sha256": "4b3a5d855d7a8d9f25daf71aca99190a1f85c5120b4a977f25616afe9b2d6aec",
+  "checkpoint_id": 2,
+  "max_actions": 99,
+  "actions_already_executed": 2,
+  "action_timeout_seconds": 0.75,
+  "remaining_wall_seconds": 58.86411573999794
+}

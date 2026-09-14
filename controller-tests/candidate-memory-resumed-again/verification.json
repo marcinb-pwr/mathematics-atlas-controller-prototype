@@ -1,0 +1,14 @@
+{
+  "outcome": "proved",
+  "standalone_check_exit": 0,
+  "axioms_output": "'AtlasRegression.demo' does not depend on any axioms\n",
+  "proof_sha256": "ec84f60fae4c92e5a031bb16504cacdc29b510aae7245db08b55d55a57882910",
+  "winning_actions": [
+    "constructor",
+    "assumption",
+    "trivial"
+  ],
+  "winning_action_count": 3,
+  "scope": "New proof elaborated with original imports; pinned compiled imports are trusted.",
+  "main_benchmark_ready": false
+}

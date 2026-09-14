@@ -1,0 +1,17 @@
+{
+  "schema": "atlas-source-environment/1",
+  "target": "Nat.Prime.ne_zero",
+  "prefix": "/-\nCopyright (c) 2015 Microsoft Corporation. All rights reserved.\nReleased under Apache 2.0 license as described in the file LICENSE.\nAuthors: Leonardo de Moura, Jeremy Avigad, Mario Carneiro\n-/\nimport Batteries.Data.Nat.Gcd\nimport Mathlib.Algebra.Group.Nat.Units\nimport Mathlib.Algebra.GroupWithZero.Nat\nimport Mathlib.Algebra.Prime.Defs\nimport Mathlib.Data.Nat.Sqrt\nimport Mathlib.Order.Basic\n\n/-!\n# Prime numbers\n\nThis file deals with prime numbers: natural numbers `p ≥ 2` whose only divisors are `p` and `1`.\n\n## Important declarations\n\n- `Nat.Prime`: the predicate that expresses that a natural number `p` is prime\n- `Nat.Primes`: the subtype of natural numbers that are prime\n- `Nat.minFac n`: the minimal prime factor of a natural number `n ≠ 1`\n- `Nat.prime_iff`: `Nat.Prime` coincides with the general definition of `Prime`\n- `Nat.irreducible_iff_nat_prime`: a non-unit natural number is\n                                  only divisible by `1` iff it is prime\n\n-/\n\nassert_not_exists Ring\n\nopen Bool Subtype Nat\n\nnamespace Nat\nvariable {n : ℕ}\n\n/-- `Nat.Prime p` means that `p` is a prime number, that is, a natural number\n  at least 2 whose only divisors are `p` and `1`.\n  The theorem `Nat.prime_def` witnesses this description of a prime number. -/\n@[pp_nodot]\ndef Prime (p : ℕ) :=\n  Irreducible p\n\ntheorem irreducible_iff_nat_prime (a : ℕ) : Irreducible a ↔ Nat.Prime a :=\n  Iff.rfl\n\ntheorem not_prime_zero : ¬ Prime 0\n  | h => h.ne_zero rfl\n\n/-- A copy of `not_prime_zero` stated in a way that works for `aesop`.\n\nSee https://github.com/leanprover-community/aesop/issues/197 for an explanation. -/\n@[aesop safe destruct] theorem prime_zero_false : Prime 0 → False :=\n  not_prime_zero\n\ntheorem not_prime_one : ¬ Prime 1\n  | h => h.ne_one rfl\n\n/-- A copy of `not_prime_one` stated in a way that works for `aesop`.\n\nSee https://github.com/leanprover-community/aesop/issues/197 for an explanation. -/\n@[aesop safe destruct] theorem prime_one_false : Prime 1 → False :=\n  not_prime_one\n\n",
+  "declaration": "theorem Prime.ne_zero {n : ℕ} (h : Prime n) : n ≠ 0",
+  "suffix": "\nend Nat\n",
+  "provenance": {
+    "kind": "mathlib_source_prefix",
+    "source_file": "Mathlib/Data/Nat/Prime/Defs.lean",
+    "source_sha256": "1de56cf465b529d36d3569c52ed0290c016bc960098f83adc509c03c2afde0e8",
+    "declaration_start_byte": 2014,
+    "assignment_start_byte": 2070,
+    "context_review": "explicit_suffix_and_source_range_checked_in_integration_tests",
+    "family_review": "pending",
+    "benchmark_approved": false
+  }
+}

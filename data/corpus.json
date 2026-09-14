@@ -1,0 +1,544 @@
+{
+  "edition": "02",
+  "title": "Across mathematics",
+  "branches": [
+    {
+      "id": "number-theory",
+      "label": "Number theory"
+    },
+    {
+      "id": "logic-sets",
+      "label": "Logic & sets"
+    },
+    {
+      "id": "algebra",
+      "label": "Algebra"
+    },
+    {
+      "id": "linear-algebra",
+      "label": "Linear algebra"
+    },
+    {
+      "id": "analysis",
+      "label": "Analysis"
+    },
+    {
+      "id": "topology",
+      "label": "Topology"
+    },
+    {
+      "id": "probability",
+      "label": "Probability"
+    },
+    {
+      "id": "combinatorics",
+      "label": "Combinatorics"
+    }
+  ],
+  "topics": [
+    {
+      "id": "primes",
+      "label": "Primes",
+      "description": "Prime natural numbers and their divisibility properties.",
+      "definitions": [
+        "Nat.Prime"
+      ],
+      "branch": "number-theory"
+    },
+    {
+      "id": "divisibility",
+      "label": "Divisibility",
+      "description": "When one natural number is a multiple of another.",
+      "definitions": [
+        "Nat.instDvd",
+        "Dvd.dvd"
+      ],
+      "branch": "number-theory"
+    },
+    {
+      "id": "gcd",
+      "label": "GCD & coprimality",
+      "description": "Greatest common divisors and coprime pairs of natural numbers.",
+      "definitions": [
+        "Nat.gcd",
+        "Nat.Coprime"
+      ],
+      "branch": "number-theory"
+    },
+    {
+      "id": "congruences",
+      "label": "Congruences",
+      "description": "Equality of natural-number remainders modulo a natural number.",
+      "definitions": [
+        "Nat.ModEq"
+      ],
+      "branch": "number-theory"
+    },
+    {
+      "id": "logic-sets",
+      "label": "Sets and equality",
+      "description": "Membership, equality, and operations on sets.",
+      "definitions": [
+        "Set"
+      ],
+      "branch": "logic-sets"
+    },
+    {
+      "id": "algebra",
+      "label": "Algebraic structures",
+      "description": "Groups, homomorphisms, and ring identities.",
+      "definitions": [
+        "Group",
+        "MonoidHom",
+        "CommSemiring"
+      ],
+      "branch": "algebra"
+    },
+    {
+      "id": "linear-algebra",
+      "label": "Linear maps and dimension",
+      "description": "Kernels, ranges, and finite-dimensional vector spaces.",
+      "definitions": [
+        "LinearMap",
+        "LinearMap.ker",
+        "LinearMap.range",
+        "Module.finrank"
+      ],
+      "branch": "linear-algebra"
+    },
+    {
+      "id": "analysis",
+      "label": "Continuity and derivatives",
+      "description": "Intermediate values, mean values, and differentiation.",
+      "definitions": [
+        "ContinuousOn",
+        "HasDerivAt",
+        "deriv",
+        "Real.exp"
+      ],
+      "branch": "analysis"
+    },
+    {
+      "id": "topology",
+      "label": "Continuity, compactness, connectedness",
+      "description": "Continuous maps and the properties of their images.",
+      "definitions": [
+        "Continuous",
+        "IsCompact",
+        "IsConnected"
+      ],
+      "branch": "topology"
+    },
+    {
+      "id": "probability",
+      "label": "Discrete distributions",
+      "description": "Probability mass functions, normalization, and certainty.",
+      "definitions": [
+        "PMF",
+        "PMF.support"
+      ],
+      "branch": "probability"
+    },
+    {
+      "id": "combinatorics",
+      "label": "Counting finite sets",
+      "description": "Subsets, products, and inclusion–exclusion.",
+      "definitions": [
+        "Finset",
+        "Finset.card",
+        "Finset.powerset"
+      ],
+      "branch": "combinatorics"
+    }
+  ],
+  "seeds": [
+    {
+      "name": "Nat.exists_infinite_primes",
+      "label": "Infinitely many primes",
+      "summary": "For every natural number n, there is a prime p with n ≤ p.",
+      "formula": "∀ n ∈ ℕ, ∃ p ∈ ℕ, n ≤ p ∧ Prime(p)",
+      "topics": [
+        "primes"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.Prime.dvd_mul",
+      "label": "A prime dividing a product",
+      "summary": "A prime divides a product exactly when it divides at least one factor.",
+      "formula": "Prime(p) ⇒ (p ∣ m · n ↔ p ∣ m ∨ p ∣ n)",
+      "topics": [
+        "primes",
+        "divisibility"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.Prime.dvd_of_dvd_pow",
+      "label": "A prime dividing a power",
+      "summary": "If a prime divides a natural-number power, it divides the base.",
+      "formula": "Prime(p) ∧ p ∣ mⁿ ⇒ p ∣ m",
+      "topics": [
+        "primes",
+        "divisibility"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.gcd_comm",
+      "label": "GCD is commutative",
+      "summary": "Switching the two arguments leaves their greatest common divisor unchanged.",
+      "formula": "gcd(m, n) = gcd(n, m)",
+      "topics": [
+        "gcd"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.gcd_dvd_left",
+      "label": "GCD divides the first argument",
+      "summary": "The greatest common divisor of two natural numbers divides the first.",
+      "formula": "gcd(m, n) ∣ m",
+      "topics": [
+        "gcd",
+        "divisibility"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.gcd_dvd_right",
+      "label": "GCD divides the second argument",
+      "summary": "The greatest common divisor of two natural numbers divides the second.",
+      "formula": "gcd(m, n) ∣ n",
+      "topics": [
+        "gcd",
+        "divisibility"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.coprime_iff_gcd_eq_one",
+      "label": "Coprimality means GCD one",
+      "summary": "Two natural numbers are coprime exactly when their greatest common divisor is one.",
+      "formula": "Coprime(m, n) ↔ gcd(m, n) = 1",
+      "topics": [
+        "gcd"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.Coprime.dvd_mul_right",
+      "label": "Cancel a coprime factor",
+      "summary": "If k and n are coprime, k divides m · n exactly when k divides m.",
+      "formula": "Coprime(k, n) ⇒ (k ∣ m · n ↔ k ∣ m)",
+      "topics": [
+        "gcd",
+        "divisibility"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.ModEq.refl",
+      "label": "Congruence is reflexive",
+      "summary": "Every natural number is congruent to itself modulo n.",
+      "formula": "a ≡ a (mod n)",
+      "topics": [
+        "congruences"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.ModEq.trans",
+      "label": "Congruence is transitive",
+      "summary": "Two successive congruences with the same modulus compose.",
+      "formula": "a ≡ b (mod n) ∧ b ≡ c (mod n) ⇒ a ≡ c (mod n)",
+      "topics": [
+        "congruences"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.ModEq.add",
+      "label": "Add congruences",
+      "summary": "Congruences with the same modulus can be added.",
+      "formula": "a ≡ b (mod n) ∧ c ≡ d (mod n) ⇒ a + c ≡ b + d (mod n)",
+      "topics": [
+        "congruences"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Nat.ModEq.mul",
+      "label": "Multiply congruences",
+      "summary": "Congruences with the same modulus can be multiplied.",
+      "formula": "a ≡ b (mod n) ∧ c ≡ d (mod n) ⇒ a · c ≡ b · d (mod n)",
+      "topics": [
+        "congruences"
+      ],
+      "branch": "number-theory",
+      "notation_note": "Natural-number variables throughout. This notation is an editorial paraphrase."
+    },
+    {
+      "name": "Set.ext",
+      "label": "Set extensionality",
+      "summary": "Sets are equal when they have the same members.",
+      "formula": "(∀ x, x ∈ A ↔ x ∈ B) ⇒ A = B",
+      "topics": [
+        "logic-sets"
+      ],
+      "branch": "logic-sets",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "Set.union_comm",
+      "label": "Union is commutative",
+      "summary": "Changing the order of two sets does not change their union.",
+      "formula": "A ∪ B = B ∪ A",
+      "topics": [
+        "logic-sets"
+      ],
+      "branch": "logic-sets",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "Set.inter_union_distrib_left",
+      "label": "Intersection distributes over union",
+      "summary": "Intersecting a union equals the union of the two intersections.",
+      "formula": "A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)",
+      "topics": [
+        "logic-sets"
+      ],
+      "branch": "logic-sets",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "mul_inv_rev",
+      "label": "Inverse of a product",
+      "summary": "In a group, invert each factor and reverse their order to invert a product.",
+      "formula": "(a · b)⁻¹ = b⁻¹ · a⁻¹",
+      "topics": [
+        "algebra"
+      ],
+      "branch": "algebra",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "map_inv",
+      "label": "Homomorphisms preserve inverses",
+      "summary": "A monoid homomorphism from a group to a division monoid preserves inversion.",
+      "formula": "f(a⁻¹) = f(a)⁻¹",
+      "topics": [
+        "algebra"
+      ],
+      "branch": "algebra",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "add_sq",
+      "label": "Square of a sum",
+      "summary": "The square of a sum expands in a commutative semiring.",
+      "formula": "(a + b)² = a² + 2 · a · b + b²",
+      "topics": [
+        "algebra"
+      ],
+      "branch": "algebra",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "LinearMap.finrank_range_add_finrank_ker",
+      "label": "Rank–nullity theorem",
+      "summary": "For a linear map with finite-dimensional domain over a division ring, the dimensions of its range and kernel add to the dimension of the domain.",
+      "formula": "dim(range f) + dim(ker f) = dim(V)",
+      "topics": [
+        "linear-algebra"
+      ],
+      "branch": "linear-algebra",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "LinearMap.injective_iff_surjective",
+      "label": "Injective iff surjective",
+      "summary": "A linear endomorphism of a finite-dimensional vector space is injective exactly when it is surjective.",
+      "formula": "f : V → V, dim(V) < ∞ ⇒ (Injective(f) ↔ Surjective(f))",
+      "topics": [
+        "linear-algebra"
+      ],
+      "branch": "linear-algebra",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "LinearMap.ker_eq_bot",
+      "label": "Injectivity and the kernel",
+      "summary": "A linear map has zero kernel exactly when it is injective.",
+      "formula": "ker(f) = {0} ↔ Injective(f)",
+      "topics": [
+        "linear-algebra"
+      ],
+      "branch": "linear-algebra",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "intermediate_value_Icc",
+      "label": "Intermediate value theorem",
+      "summary": "For a continuous function on a closed interval, every value between its endpoint values is attained. The formal theorem uses ordered topological spaces; its familiar real-valued instance is shown here.",
+      "formula": "a ≤ b, f continuous on [a,b] ⇒ [f(a),f(b)] ⊆ f([a,b])",
+      "topics": [
+        "analysis"
+      ],
+      "branch": "analysis",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "exists_deriv_eq_slope",
+      "label": "Mean value theorem",
+      "summary": "If a real function is continuous on [a,b] and differentiable on (a,b), with a < b, its derivative somewhere in the interior equals the secant slope.",
+      "formula": "∃ c ∈ (a,b), f′(c) = (f(b) − f(a)) / (b − a)",
+      "topics": [
+        "analysis"
+      ],
+      "branch": "analysis",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "Real.hasDerivAt_exp",
+      "label": "Derivative of the exponential",
+      "summary": "The real exponential function is differentiable everywhere and is its own derivative.",
+      "formula": "d/dx exp(x) = exp(x)",
+      "topics": [
+        "analysis"
+      ],
+      "branch": "analysis",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "Continuous.comp",
+      "label": "Compose continuous maps",
+      "summary": "The composition of continuous maps is continuous.",
+      "formula": "Continuous(f) ∧ Continuous(g) ⇒ Continuous(g ∘ f)",
+      "topics": [
+        "topology"
+      ],
+      "branch": "topology",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "IsCompact.image",
+      "label": "Continuous image of a compact set",
+      "summary": "The image of a compact set under a continuous map is compact.",
+      "formula": "Compact(K) ∧ Continuous(f) ⇒ Compact(f(K))",
+      "topics": [
+        "topology"
+      ],
+      "branch": "topology",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "IsConnected.image",
+      "label": "Continuous image of a connected set",
+      "summary": "A function continuous on a connected set has connected image.",
+      "formula": "Connected(S) ∧ ContinuousOn(f,S) ⇒ Connected(f(S))",
+      "topics": [
+        "topology"
+      ],
+      "branch": "topology",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "PMF.tsum_coe",
+      "label": "Total probability is one",
+      "summary": "The masses of a probability mass function sum to one.",
+      "formula": "∑ₓ p(x) = 1",
+      "topics": [
+        "probability"
+      ],
+      "branch": "probability",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "PMF.coe_le_one",
+      "label": "A probability is at most one",
+      "summary": "Every individual mass in a probability mass function is at most one.",
+      "formula": "p(x) ≤ 1",
+      "topics": [
+        "probability"
+      ],
+      "branch": "probability",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "PMF.apply_eq_one_iff",
+      "label": "Certainty and singleton support",
+      "summary": "An outcome has probability one exactly when it is the entire support.",
+      "formula": "p(x) = 1 ↔ support(p) = {x}",
+      "topics": [
+        "probability"
+      ],
+      "branch": "probability",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "Finset.card_powerset",
+      "label": "Number of subsets",
+      "summary": "A finite set with n elements has 2 to the power n subsets.",
+      "formula": "|𝒫(S)| = 2^|S|",
+      "topics": [
+        "combinatorics"
+      ],
+      "branch": "combinatorics",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "Finset.card_product",
+      "label": "Count a Cartesian product",
+      "summary": "The number of ordered pairs is the product of the sizes of the two finite sets.",
+      "formula": "|S × T| = |S| · |T|",
+      "topics": [
+        "combinatorics"
+      ],
+      "branch": "combinatorics",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    },
+    {
+      "name": "Finset.card_union_add_card_inter",
+      "label": "Inclusion–exclusion for two sets",
+      "summary": "The sum of the sizes of the union and intersection equals the sum of the two set sizes.",
+      "formula": "|S ∪ T| + |S ∩ T| = |S| + |T|",
+      "topics": [
+        "combinatorics"
+      ],
+      "branch": "combinatorics",
+      "notation_note": "Editorial notation. The exact Lean statement below specifies all types and hypotheses."
+    }
+  ],
+  "modules": [
+    "Mathlib.Data.Nat.Prime.Infinite",
+    "Mathlib.Data.Nat.Prime.Basic",
+    "Mathlib.Data.Nat.Prime.Pow",
+    "Mathlib.Data.Nat.GCD.Basic",
+    "Mathlib.Data.Nat.ModEq",
+    "Mathlib.Data.Set.Basic",
+    "Mathlib.Algebra.Group.Hom.Defs",
+    "Mathlib.Algebra.Ring.Defs",
+    "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+    "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+    "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+    "Mathlib.Topology.Order.IntermediateValue",
+    "Mathlib.Topology.Compactness.Compact",
+    "Mathlib.Topology.Connected.Basic",
+    "Mathlib.Probability.ProbabilityMassFunction.Basic",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.Finset.Prod",
+    "Mathlib.Data.Finset.Card"
+  ]
+}

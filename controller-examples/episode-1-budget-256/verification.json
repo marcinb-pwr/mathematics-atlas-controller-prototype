@@ -1,0 +1,15 @@
+{
+  "outcome": "proved",
+  "standalone_check_exit": 0,
+  "axioms_output": "'Nat.Prime.ne_zero' depends on axioms: [propext]\n",
+  "proof_sha256": "b3f5fe5ac6ee6e988cf2f8bc1f966a1a33e603f2bdeac6a3e84d2097a256ac06",
+  "winning_actions": [
+    "intro h_atlas_0",
+    "apply Nat.prime_zero_false",
+    "rw [← h_atlas_0]",
+    "assumption"
+  ],
+  "winning_action_count": 4,
+  "scope": "New proof elaborated with original imports; pinned compiled imports are trusted.",
+  "main_benchmark_ready": false
+}

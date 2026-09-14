@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "target": "Nat.Prime.dvd_mul",
+  "module": "Mathlib.Data.Nat.Prime.Defs",
+  "collection_policy": "hand-authored engineering demonstration; no learned controller",
+  "budget": {"max_executed_actions": 24, "max_heartbeats": 200000, "process_timeout_seconds": 180},
+  "actions": [
+    {"from": 0, "action": "exact pp", "expect": "error", "branch": "main"},
+    {"from": 1, "action": "constructor", "expect": "success", "branch": "main"},
+    {"from": 2, "action": "intro H", "expect": "success", "branch": "main"},
+    {"from": 3, "action": "apply Or.inl", "expect": "success", "branch": "left-only"},
+    {"from": 4, "action": "exact H", "expect": "error", "branch": "left-only"},
+    {"from": 3, "action": "apply or_iff_not_imp_left.mpr", "expect": "success", "branch": "classical"},
+    {"from": 6, "action": "intro h", "expect": "success", "branch": "classical"},
+    {"from": 7, "action": "exact (pp.coprime_iff_not_dvd.mpr h).dvd_of_dvd_mul_left H", "expect": "success", "branch": "classical"},
+    {"from": 8, "action": "intro h", "expect": "success", "branch": "classical"},
+    {"from": 9, "action": "exact h", "expect": "error", "branch": "classical"},
+    {"from": 10, "action": "rcases h with hm | hn", "expect": "success", "branch": "classical"},
+    {"from": 11, "action": "exact hm", "expect": "error", "branch": "classical"},
+    {"from": 12, "action": "exact hm.mul_right n", "expect": "success", "branch": "classical"},
+    {"from": 13, "action": "exact hn.mul_left m", "expect": "success", "branch": "classical"}
+  ]
+}

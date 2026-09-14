@@ -1,0 +1,12 @@
+{
+  "outcome": "proved",
+  "standalone_check_exit": 0,
+  "axioms_output": "'Finset.erase_empty' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "proof_sha256": "a8760a1022f4e3c4999a4d21bc02be97a6cdf9796bb9f027f869d90697622db9",
+  "winning_actions": [
+    "rfl"
+  ],
+  "winning_action_count": 1,
+  "scope": "New proof elaborated with original imports; pinned compiled imports are trusted.",
+  "main_benchmark_ready": false
+}

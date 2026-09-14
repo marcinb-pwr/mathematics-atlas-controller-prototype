@@ -1,0 +1,11 @@
+{
+  "schema": "atlas-source-environment/1",
+  "target": "AtlasDemo.demo",
+  "prefix": "import Lean\nnamespace AtlasDemo\n",
+  "declaration": "theorem demo (p : Prop) (h : p) : p ∧ True",
+  "suffix": "\nend AtlasDemo\n",
+  "provenance": {
+    "kind": "synthetic_regression",
+    "benchmark_approved": false
+  }
+}

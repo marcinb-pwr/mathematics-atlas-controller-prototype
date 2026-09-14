@@ -1,0 +1,3 @@
+{"budget":{"action_wall_seconds":30,"episode_wall_seconds":60,"max_executed_actions":64},"driver_sha256":"7d59ae137b249c20acc8bdce8239c54f74a9253c34dd08b2bb9c62ffd8f4d5da","environment_sha256":"adc150879b56f29381ab0d3a7b52824ae74d716799e02af9223c9151182957e3","host_elapsed_ns":314093,"kind":"start","main_benchmark_ready":false,"replay":null,"schema":"atlas-controller-session/2","split":"engineering_demo"}
+{"duration_ns":30863138,"host_elapsed_ns":31364387,"kind":"cost","phase":"runtime_setup"}
+{"error":"Premise cache identity or payload hash mismatch","host_elapsed_ns":31830705,"kind":"terminal","outcome":"process_error"}

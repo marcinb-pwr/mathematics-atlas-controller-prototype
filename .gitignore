@@ -1,0 +1,6 @@
+.work/
+.sites-runtime/
+formal/.lake/
+__pycache__/
+*.pyc
+out/

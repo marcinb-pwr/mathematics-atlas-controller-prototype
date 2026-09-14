@@ -1,0 +1,432 @@
+{
+  "schema": "atlas-controller-session/2",
+  "environment": {
+    "declaration": "theorem demo (p : Prop) (h : p) : p ∧ True",
+    "prefix": "import Lean\nnamespace AtlasRegression\n",
+    "provenance": {
+      "kind": "synthetic_regression"
+    },
+    "suffix": "\nend AtlasRegression\n",
+    "target": "AtlasRegression.demo"
+  },
+  "source_lock": {
+    "mathlib_repository": "https://github.com/leanprover-community/mathlib4",
+    "mathlib_ref": "v4.19.0",
+    "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "lean_toolchain": "leanprover/lean4:v4.19.0",
+    "lean_commit": "6caaee842e9495688c1567e78c0e68dbb96942aa",
+    "lean_version": "4.19.0",
+    "lean_archive_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+    "snapshot_id": "mathlib-c44e0c8ee63ca166450922a373c7409c5d26b00b-math02",
+    "packages": [
+      {
+        "url": "https://github.com/leanprover-community/plausible",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "77e08eddc486491d7b9e470926b3dbe50319451a",
+        "name": "plausible",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "25078369972d295301f5a1e53c3e5850cf6d9d4c",
+        "name": "LeanSearchClient",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/import-graph",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b",
+        "name": "importGraph",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "c4919189477c3221e6a204008998b0d724f49904",
+        "name": "proofwidgets",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "v0.0.57",
+        "inherited": false,
+        "configFile": "lakefile.lean"
+      },
+      {
+        "url": "https://github.com/leanprover-community/aesop",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "5d50b08dedd7d69b3d9b3176e0d58a23af228884",
+        "name": "aesop",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "master",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/quote4",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02",
+        "name": "Qq",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "master",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover-community/batteries",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover-community",
+        "rev": "f5d04a9c4973d401c8c92500711518f7c656f034",
+        "name": "batteries",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": false,
+        "configFile": "lakefile.toml"
+      },
+      {
+        "url": "https://github.com/leanprover/lean4-cli",
+        "type": "git",
+        "subDir": null,
+        "scope": "leanprover",
+        "rev": "02dbd02bc00ec4916e99b04b2245b30200e200d0",
+        "name": "Cli",
+        "manifestFile": "lake-manifest.json",
+        "inputRev": "main",
+        "inherited": true,
+        "configFile": "lakefile.toml"
+      }
+    ]
+  },
+  "recorder_sha256": "8f57aeca886bdf4a9129a8695233ac57474bfd66c8739fe2af627d90bfaee49f",
+  "stop_after_event": 2,
+  "commands": [
+    {
+      "op": "step",
+      "action": "fail \"recorded failure\""
+    },
+    {
+      "op": "step",
+      "action": "fail \"second failure\""
+    },
+    {
+      "op": "snapshot"
+    }
+  ],
+  "response_fingerprints": [
+    "c755bef72c58268247072d33bfc4e6858d231abca43e166721c1713c71173c29",
+    "b2c0fe87b03988d6259a700ed911552e9d61ac4128d16a5087e59bdbf68e7062",
+    "e2d844c9f156375d2100aadd83ad14fbfeafb8340acd3f33cdc2bd4dab38c6ce"
+  ],
+  "history_sha256": "5a6ce651763bbe6140b84cce95fb2d3544ab1118621791ffe03f7cf7f500fbe1",
+  "initial_snapshot_sha256": "a745171c2ff704ceede38eb9edc301e57555493e7a68425de8e069789f3df4b5",
+  "controller_memory": [
+    {
+      "budget": {
+        "action_timeout_seconds": 30,
+        "max_actions": 64
+      },
+      "event_index": -1,
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [],
+        "remaining_actions": 64,
+        "remaining_wall_seconds": 59.5702634320005,
+        "schema": "atlas-observation/1",
+        "state_id": "s0",
+        "terminal_outcome": null
+      },
+      "phase": "initial"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 30,
+        "max_actions": 64
+      },
+      "candidates": null,
+      "event_index": 0,
+      "generator": null,
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [],
+        "remaining_actions": 64,
+        "remaining_wall_seconds": 59.56968780200077,
+        "schema": "atlas-observation/1",
+        "state_id": "s0",
+        "terminal_outcome": null
+      },
+      "phase": "before_action"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 30,
+        "max_actions": 64
+      },
+      "event_index": 0,
+      "feedback": {
+        "action": "fail \"recorded failure\"",
+        "chosen_id": null,
+        "error": "recorded failure\np : Prop\nh : p\n⊢ p ∧ True",
+        "operation": "step",
+        "parent_event_index": null,
+        "previous_event_index": null,
+        "tactic_acceptance": "rejected"
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [
+          {
+            "action": "fail \"recorded failure\"",
+            "error": "recorded failure\np : Prop\nh : p\n⊢ p ∧ True",
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "rejected"
+          }
+        ],
+        "remaining_actions": 63,
+        "remaining_wall_seconds": 59.56701580799927,
+        "schema": "atlas-observation/1",
+        "state_id": "s1",
+        "terminal_outcome": null
+      },
+      "phase": "feedback"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 30,
+        "max_actions": 64
+      },
+      "candidates": null,
+      "event_index": 1,
+      "generator": null,
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [
+          {
+            "action": "fail \"recorded failure\"",
+            "error": "recorded failure\np : Prop\nh : p\n⊢ p ∧ True",
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "rejected"
+          }
+        ],
+        "remaining_actions": 63,
+        "remaining_wall_seconds": 59.56662184599918,
+        "schema": "atlas-observation/1",
+        "state_id": "s1",
+        "terminal_outcome": null
+      },
+      "phase": "before_action"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 30,
+        "max_actions": 64
+      },
+      "event_index": 1,
+      "feedback": {
+        "action": "fail \"second failure\"",
+        "chosen_id": null,
+        "error": "second failure\np : Prop\nh : p\n⊢ p ∧ True",
+        "operation": "step",
+        "parent_event_index": 0,
+        "previous_event_index": 0,
+        "tactic_acceptance": "rejected"
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [
+          {
+            "action": "fail \"recorded failure\"",
+            "error": "recorded failure\np : Prop\nh : p\n⊢ p ∧ True",
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "rejected"
+          },
+          {
+            "action": "fail \"second failure\"",
+            "error": "second failure\np : Prop\nh : p\n⊢ p ∧ True",
+            "event_index": 1,
+            "operation": "step",
+            "tactic_acceptance": "rejected"
+          }
+        ],
+        "remaining_actions": 62,
+        "remaining_wall_seconds": 59.56464042100015,
+        "schema": "atlas-observation/1",
+        "state_id": "s2",
+        "terminal_outcome": null
+      },
+      "phase": "feedback"
+    },
+    {
+      "budget": {
+        "action_timeout_seconds": 30,
+        "max_actions": 64
+      },
+      "event_index": 2,
+      "feedback": {
+        "operation": "snapshot",
+        "parent_event_index": 1,
+        "previous_event_index": 1
+      },
+      "observation": {
+        "branch_id": "b0000",
+        "goals": [
+          {
+            "hypotheses": [
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "p",
+                "type": "Prop"
+              },
+              {
+                "binder_info": "Lean.BinderInfo.default",
+                "name": "h",
+                "type": "p"
+              }
+            ],
+            "target": "p ∧ True"
+          }
+        ],
+        "history": [
+          {
+            "action": "fail \"recorded failure\"",
+            "error": "recorded failure\np : Prop\nh : p\n⊢ p ∧ True",
+            "event_index": 0,
+            "operation": "step",
+            "tactic_acceptance": "rejected"
+          },
+          {
+            "action": "fail \"second failure\"",
+            "error": "second failure\np : Prop\nh : p\n⊢ p ∧ True",
+            "event_index": 1,
+            "operation": "step",
+            "tactic_acceptance": "rejected"
+          },
+          {
+            "event_index": 2,
+            "operation": "snapshot"
+          }
+        ],
+        "remaining_actions": 62,
+        "remaining_wall_seconds": 59.56326672400064,
+        "schema": "atlas-observation/1",
+        "state_id": "s2",
+        "terminal_outcome": null
+      },
+      "phase": "feedback"
+    }
+  ],
+  "controller_memory_sha256": "e5b49482f5e8a24d8923d388fbc7e97e5ee483ff184bbbc6d4161d0458ec6196",
+  "snapshot_sha256": "a745171c2ff704ceede38eb9edc301e57555493e7a68425de8e069789f3df4b5",
+  "checkpoint_id": 2,
+  "max_actions": 64,
+  "actions_already_executed": 2,
+  "action_timeout_seconds": 30,
+  "remaining_wall_seconds": 59.56267790399943
+}

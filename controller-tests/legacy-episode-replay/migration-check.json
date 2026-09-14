@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "source": "Previous version-1 controller-examples/episode-1",
+  "fresh_lean_replay": true,
+  "action_timeout_seconds": 30
+}

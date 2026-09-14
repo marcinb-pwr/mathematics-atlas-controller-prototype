@@ -1,0 +1,20 @@
+{
+  "outcome": "proved",
+  "standalone_check_exit": 0,
+  "axioms_output": "'Nat.Prime.dvd_mul' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "proof_sha256": "a6dc821dece1895a518316dd392e1a0f7aafec245f1ea5ee645d77cd08f95609",
+  "winning_actions": [
+    "constructor",
+    "intro H",
+    "apply or_iff_not_imp_left.mpr",
+    "intro h",
+    "exact (pp.coprime_iff_not_dvd.mpr h).dvd_of_dvd_mul_left H",
+    "intro h",
+    "rcases h with hm | hn",
+    "exact hm.mul_right n",
+    "exact hn.mul_left m"
+  ],
+  "winning_action_count": 9,
+  "scope": "New proof elaborated with original imports; pinned compiled imports are trusted.",
+  "main_benchmark_ready": false
+}

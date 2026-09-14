@@ -1,0 +1,9 @@
+{
+  "target": "Nat.add_comm",
+  "prefix": "import Lean\nnamespace AtlasRegression\n",
+  "declaration": "theorem demo (p : Prop) (h : p) : p ∧ True",
+  "suffix": "\nend AtlasRegression\n",
+  "provenance": {
+    "kind": "synthetic_regression"
+  }
+}

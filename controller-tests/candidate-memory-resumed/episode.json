@@ -1,0 +1,31 @@
+{
+  "schema": "atlas-controller-session/2",
+  "target": "AtlasRegression.demo",
+  "outcome": "abandoned",
+  "error": null,
+  "split": "engineering_demo",
+  "main_benchmark_ready": false,
+  "executed_actions": 2,
+  "remaining_actions": 97,
+  "wall_elapsed_ns": 491692233,
+  "host_phase_ns": {
+    "journal_serialization": 1747999,
+    "runtime_setup": 29927995,
+    "environment_initialization": 431801928,
+    "controller_memory_serialization": 599266,
+    "observation_serialization": 116041,
+    "lean_round_trip": 7251950
+  },
+  "initialization_wall_ns": 463789793,
+  "search_wall_ns": 12222205,
+  "search_timing_policy": "After initialization through the stop response or failure; excludes standalone final checking.",
+  "premise_inventory_cache": "not_requested",
+  "external_phase_status": {
+    "premise_retrieval": "not_instrumented",
+    "candidate_generation": "not_instrumented",
+    "controller_inference": "not_instrumented"
+  },
+  "unattributed_wall_ns": 20247054,
+  "cost_policy": "Host phases are sequential. Lean timers are subcomponents of round-trip time, never added again. Wall time includes setup, waits, failed attempts and final checks.",
+  "successful_verification_receipt": false
+}

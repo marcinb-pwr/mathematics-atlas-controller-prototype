@@ -1,0 +1,9 @@
+{
+  "declaration": "theorem demo (p : Prop) (h : p) : p ∧ True",
+  "prefix": "import Lean\nnamespace AtlasRegression\n",
+  "provenance": {
+    "kind": "synthetic_regression"
+  },
+  "suffix": "\nend AtlasRegression\n",
+  "target": "AtlasRegression.demo"
+}

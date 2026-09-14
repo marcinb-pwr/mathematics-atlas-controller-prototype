@@ -1,0 +1,26 @@
+{
+  "tests_run": 17,
+  "failures": 0,
+  "errors": 0,
+  "lean_reexecuted": true,
+  "passed": true,
+  "test_names": [
+    "test_action_timeout_checkpoint_and_original_memory",
+    "test_admitted_final_proof_is_rejected",
+    "test_budget_exhaustion_retains_failed_action",
+    "test_candidate_inputs_survive_replay_and_a_second_resume",
+    "test_changed_controller_feedback_is_rejected",
+    "test_chronological_divergence_with_equal_final_state_is_rejected",
+    "test_episode_timeout_and_explicit_overrides",
+    "test_intermediate_reconstruction_and_new_action",
+    "test_inventory_cache_hit_and_corruption_detection",
+    "test_old_checkpoint_cannot_silently_supply_default_timeout",
+    "test_original_pilot_actions_as_regression_fixture",
+    "test_process_error_retains_previous_events",
+    "test_replay_cut_point_in_failed_episode_and_causal_view",
+    "test_response_fingerprint_excludes_only_measured_timings",
+    "test_restore_branches_and_observation_boundary",
+    "test_target_guard_and_parameterized_environment",
+    "test_timeout_retains_request_and_prefix"
+  ]
+}

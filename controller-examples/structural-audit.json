@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "lean_reexecuted_by_this_audit": false,
+  "checks": [
+    "producer_source_hashes",
+    "inventory_identity_hash_and_target_absence",
+    "retrieval_and_candidate_regeneration",
+    "statement_association_provenance",
+    "online_and_causal_observation_agreement",
+    "original_controller_inputs_and_feedback",
+    "chronological_and_branch_ancestry",
+    "null_untried_and_value_labels",
+    "failed_tactic_rollback",
+    "winning_ancestry_and_standalone_proof_receipt"
+  ],
+  "candidate_sets_regenerated": 29,
+  "distinct_episode_states_regenerated": 29,
+  "candidate_size_range": [
+    38,
+    63
+  ],
+  "episodes": [
+    {
+      "directory": "episode-0-budget-16",
+      "target": "Nat.irreducible_iff_nat_prime",
+      "outcome": "proved",
+      "actions": 2,
+      "rejected_tactics": 1,
+      "allowed_premises": 50544,
+      "winning_action_count": 1,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-0-budget-256",
+      "target": "Nat.irreducible_iff_nat_prime",
+      "outcome": "proved",
+      "actions": 2,
+      "rejected_tactics": 1,
+      "allowed_premises": 50544,
+      "winning_action_count": 1,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-1-budget-16",
+      "target": "Nat.Prime.ne_zero",
+      "outcome": "budget_exhausted",
+      "actions": 16,
+      "rejected_tactics": 14,
+      "allowed_premises": 50549,
+      "winning_action_count": null,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-1-budget-256",
+      "target": "Nat.Prime.ne_zero",
+      "outcome": "proved",
+      "actions": 21,
+      "rejected_tactics": 17,
+      "allowed_premises": 50549,
+      "winning_action_count": 4,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-2-budget-16",
+      "target": "Finset.disjUnion_eq_union",
+      "outcome": "budget_exhausted",
+      "actions": 16,
+      "rejected_tactics": 14,
+      "allowed_premises": 57965,
+      "winning_action_count": null,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-2-budget-256",
+      "target": "Finset.disjUnion_eq_union",
+      "outcome": "proved",
+      "actions": 31,
+      "rejected_tactics": 27,
+      "allowed_premises": 57965,
+      "winning_action_count": 4,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-3-budget-16",
+      "target": "Finset.erase_empty",
+      "outcome": "proved",
+      "actions": 2,
+      "rejected_tactics": 1,
+      "allowed_premises": 57986,
+      "winning_action_count": 1,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-3-budget-256",
+      "target": "Finset.erase_empty",
+      "outcome": "proved",
+      "actions": 2,
+      "rejected_tactics": 1,
+      "allowed_premises": 57986,
+      "winning_action_count": 1,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-4-budget-16",
+      "target": "Nat.Prime.pos",
+      "outcome": "budget_exhausted",
+      "actions": 16,
+      "rejected_tactics": 16,
+      "allowed_premises": 50550,
+      "winning_action_count": null,
+      "inventory_cache": "miss"
+    },
+    {
+      "directory": "episode-4-budget-256",
+      "target": "Nat.Prime.pos",
+      "outcome": "abandoned",
+      "actions": 38,
+      "rejected_tactics": 38,
+      "allowed_premises": 50550,
+      "winning_action_count": null,
+      "inventory_cache": "hit"
+    },
+    {
+      "directory": "episode-5-budget-16",
+      "target": "Finset.disjoint_union_left",
+      "outcome": "budget_exhausted",
+      "actions": 16,
+      "rejected_tactics": 16,
+      "allowed_premises": 57966,
+      "winning_action_count": null,
+      "inventory_cache": "miss"
+    },
+    {
+      "directory": "episode-5-budget-256",
+      "target": "Finset.disjoint_union_left",
+      "outcome": "budget_exhausted",
+      "actions": 256,
+      "rejected_tactics": 247,
+      "allowed_premises": 57966,
+      "winning_action_count": null,
+      "inventory_cache": "hit"
+    }
+  ]
+}

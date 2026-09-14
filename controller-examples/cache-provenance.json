@@ -1,0 +1,34 @@
+{
+  "source_bundle_sha256": "3b0e56f213fb4143d3b50e9c2d7b39e9f17737b4f84926f7e2eeb3e508feb6bf",
+  "source": "Previous controller prototype, unchanged recorder and source lock; four inventory caches seeded before this collection. The two additional environments were exported during this collection.",
+  "seeds": [
+    {
+      "target": "Nat.irreducible_iff_nat_prime",
+      "source_episode": "episode-0",
+      "source_inventory_gzip_sha256": "1396c595555a0466c0fcf79ca84aa2768f736fcb48886e2341982d62aef36e8d",
+      "cache_key": "0d237ef02e58237d8bf7fda973a3f083b91903e0e7f034c6dda88a58503d74b9",
+      "cached_gzip_sha256": "b9abe632803a21d53c86c634a239e1d6253acff60eabb0767eca421711712f08"
+    },
+    {
+      "target": "Nat.Prime.ne_zero",
+      "source_episode": "episode-1",
+      "source_inventory_gzip_sha256": "1b3dab288e9de43709c3cdaf4fe753b3febd19e97b2572e929f2872fb3a91f67",
+      "cache_key": "fcc1f74ba5c74affaa9c5e0e51a449ebd9f30e748c0e6cd767ceb5b27c501234",
+      "cached_gzip_sha256": "0e60523df9a559eea011d17c533b962956c6e551eaf48720d69b061cfcc1f10f"
+    },
+    {
+      "target": "Finset.disjUnion_eq_union",
+      "source_episode": "episode-2",
+      "source_inventory_gzip_sha256": "6ea28df8555037aa1a72c3bb9c891cf126fac39280cc34fe3846126ca1f23da8",
+      "cache_key": "0f95640cedeeeb7ef0bb86b40727c84488c1158b93ed167af235eded12aadacd",
+      "cached_gzip_sha256": "d8fd5d4beaa5f03c072c911f0c6a7e91c32f89051cdc1244b980aa68b0ff476a"
+    },
+    {
+      "target": "Finset.erase_empty",
+      "source_episode": "episode-3",
+      "source_inventory_gzip_sha256": "b3ef7decdf73a6825459e449c8d85d2d4267f4663e34bb75d895634730311355",
+      "cache_key": "f55d1cf122dab4334ba2cc3b8d94a1019e0d943ee682dfa8aaff2a11dd4abc82",
+      "cached_gzip_sha256": "e818c153d82fe950564fe31d7786c5693fcfed03a9a1522ec10ed8fac2ea76b9"
+    }
+  ]
+}
