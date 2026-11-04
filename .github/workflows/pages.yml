@@ -1,0 +1,55 @@
+name: Publish Mathematics Atlas
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dist/**'
+      - 'WEB_ASSETS.json'
+      - 'scripts/stage_public.py'
+      - 'scripts/verify_web_assets.py'
+      - 'tests/test_graph.mjs'
+      - 'tests/test_loading.mjs'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify the published data and download bundles
+        run: python3 scripts/verify_web_assets.py
+      - name: Check graph exploration and loading
+        run: node --test tests/test_graph.mjs tests/test_loading.mjs
+      - name: Stage the static website
+        run: python3 scripts/stage_public.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy Mathematics Atlas
+        id: deployment
+        uses: actions/deploy-pages@v5

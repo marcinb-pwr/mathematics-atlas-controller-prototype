@@ -1,7 +1,7 @@
 {
   "schema": "atlas-controller-bundle/2",
   "source_base_commit": "d995d6bbae7ea95117a3cac2d4cf91aa443824b0",
-  "source_revision_policy": "Recovered base commit plus updated source bytes identified by payload_sha256; this artifact has no new Git commit.",
+  "source_revision_policy": "Controller records retain their original producer hashes. Current repository payload bytes are identified by payload_sha256; Git history records the GitHub Pages publication changes.",
   "main_benchmark_ready": false,
   "controller_trained": false,
   "lean_reexecuted": true,
@@ -72,8 +72,7 @@
   "verification_scope": "New proof and replay integration checks with pinned, trusted compiled imports. No repeat of the entire static-corpus kernel audit.",
   "original_pilot_preserved": true,
   "not_included": [
-    "Lean/toolchain binaries and caches",
-    "separate static graph/expression dataset"
+    "Lean/toolchain binaries and caches"
   ],
   "pending": [
     "representative target and family review",
@@ -84,14 +83,17 @@
     "BDH training and evaluation"
   ],
   "payload_sha256": {
+    ".github/workflows/pages.yml": "574e8e2b8e18662c1ab2a698700c5c426aaeefe0c0c63ed26317e870662eb4b4",
     ".gitignore": "98fc753d526f655f1d56bf34c3766a0b44573f8945fbd2e1fa157ddca105155b",
     "CONTROLLER.md": "edc7d60744ddabdddc5c2147d67adc9f661c82e00879200cbaa001866e14c129",
+    "GITHUB_PAGES.md": "294be70bd826de9859eb5298f77dddd8258fd74e026c25cd135f43903bb3ea49",
     "LICENSE": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
     "NOTICE.md": "199f85dfa8d675c6fd2863467f9e0ad081265cb5f4fa7b440011c5d2d1c0f488",
     "PROJECT_README.md": "0c71224caf7013e80e0cccc435b351f0f8615f8fda18a1a591f2b0c3b0546865",
-    "README.md": "5f635d8acbd8bdc091e5024010151aeacf8142b30cc3fd1eaf0238c9d1324568",
+    "README.md": "e53477b3f3408894c5a5d0712f9b96520a0e371e556841a12418657b1bf88ff3",
     "REPLAY.md": "9a2f34a8f181bd1d32fd2f2bea2609bee52f826f885218b5983d602bc66328ec",
     "SCHEMA.md": "26945443c134febd3e2fb5a7f583b57617a0a63436c1723ae844a60c53235792",
+    "WEB_ASSETS.json": "2713a07bec6ccf2e96570f46ec1c2fb21b398df17595927aad25771ed6870a82",
     "controller-examples/cache-provenance.json": "880d64f26a4ba9c68f5093645ed7546c8c82d6ebd3b9449b27e140a836a2ae4c",
     "controller-examples/cache-seeds.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
     "controller-examples/collection.json": "39e37b86580e5a51ed053f99de8bfbbcfa2275fda13dc7c54ac1df47b99a6b43",
@@ -636,7 +638,15 @@
     "data/pilot-plan.json": "ef7b80d965e37e183aa2c66d26f8ca824bd53a1e473c5cdde5eb1a09cc7a4b1e",
     "data/source-lock.json": "e84e4ccc81f037abbf938041bab07a6d55f97852fb70627be9437836214ce88f",
     "data/verification.json": "8bcb850bc9504176e023b794384cdb08ade4aed46472b22e9ef6d1d0ba66580f",
+    "dist/.nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "dist/app.mjs": "d3b34479a14baca24e5f374cd8b3af04c9e3b359e2e20b44ebe1e09d41d15aba",
+    "dist/data/NOTICE.md": "199f85dfa8d675c6fd2863467f9e0ad081265cb5f4fa7b440011c5d2d1c0f488",
+    "dist/data/SCHEMA.md": "26945443c134febd3e2fb5a7f583b57617a0a63436c1723ae844a60c53235792",
+    "dist/data/atlas.json.gz": "9493bcc383f1ece4cc4768e8d4da6f2bb619aa5729c8d0158fd2425ea348abbb",
+    "dist/data/expressions.ndjson.gz": "11eec589f67755a7a11be850efb1888ccf72590e370f2fc39677a3f91d001475",
+    "dist/data/mathematics-atlas-dataset.zip": "881459805e8c04d05f5cd143063ed0f4ef24df9e2b8c519310ae1dba2763507b",
+    "dist/data/mathematics-atlas-replay-pilot.zip": "39b85d8817ed52dba3e897c773d650de6bbae9dd2d5a71fd42d69c35fc954808",
+    "dist/data/mathematics-atlas-source.zip": "f15e417c5a81729b142eed257b1ebab15a69bdae67eadbde04f3d351bd7a5d47",
     "dist/data/replay-pilot/AtlasReplay.lean": "db0482caeb214a1c24667bdd62f794f901d4f1078fdfbd1c8fa899f6f340c818",
     "dist/data/replay-pilot/CheckedProof.lean": "239a7eb5edad218ede17b6dbbbd32ce631064878ae477a37d5700e4eca08a1fd",
     "dist/data/replay-pilot/Episode.lean": "1c191689b747fe0988d988368c90859c0b04a5d418dc1be346ff41e14dd6a8aa",
@@ -651,6 +661,8 @@
     "dist/data/replay-pilot/trace.json": "3c3dc00370a5c23b15c67457f491762c06cb73ffdfd846af64c96191196435ad",
     "dist/data/replay-pilot/transitions.ndjson": "2884850237172f137c8d84d9abffa756a81fbcd40bf825f59d95ebe3036bd5d2",
     "dist/data/replay-pilot/verification.json": "b691e98e784238d61379dcf8e2ec1a74b26c2db77071468485fccb59de930fed",
+    "dist/data/training-manifest.json": "9d7b2b2d1e2b6abf0f5b573852b35a489d8ca35c3e7f4fec9cf47bf08539b3de",
+    "dist/data/verification.json": "8bcb850bc9504176e023b794384cdb08ade4aed46472b22e9ef6d1d0ba66580f",
     "dist/graph-core.mjs": "49cb97021031f569db1e470aa993fe0c84384ae122c48ef0184a600a4baf0376",
     "dist/index.html": "6c35126e1315e08f68e43dffe3a8fe462e975315fb1901811e604925838db4a9",
     "dist/load-atlas.mjs": "5b284583844c9d2a5a285ecb9236e1550f1da02c815477d517fa57c01367fa63",
@@ -675,10 +687,18 @@
     "scripts/sync_corpus.py": "bbc10158e66c7669bae79838416a79041f80028ac1bf4d6ffcdd2a407bca6c46",
     "scripts/training_metadata.py": "69dc70c06a5f11d35d40cd4228280c6d16f5e9e3be853c602b4ae4447f6e7437",
     "scripts/verify_controller_collection.py": "6e79c2f788eb852e55a3aa8a0d6ac55cb9fcec528aedec6865aa771a0113fec7",
+    "scripts/verify_web_assets.py": "8165972723f3ca973d86f0f4435243ea4b22b0a78519bebce4ab193fc044a61a",
     "tests/test_controller_session.py": "368510f6379824fa6b21de51c04be59042b38ffe2e4d2e25b13e2849fbf3908e",
     "tests/test_controller_v2.py": "d1bdbeaf6d8e867f111fd97975954c14ac7c1ef124f91ac459064ed455d462d9",
     "tests/test_graph.mjs": "4f7f95b47b74cc3d1fe1ef3d0a37a09fe6080228161ffc090f9aba5fbbe491e4",
-    "tests/test_loading.mjs": "caa01fb00ed90e2c6188e5a078eb0742f8a482f30f0d4d29c0181fd7c1d36f27",
+    "tests/test_loading.mjs": "02f3941f865e514e5e4c9e0904db45c47304c91f3f06e088a41b99a2bfd80994",
     "tests/test_training.py": "7e050e7e8b7fd4b074c63ed4b710ecbf2a07bcb854b7a3d0c1af54c71c016d53"
+  },
+  "website": {
+    "documentation": "GITHUB_PAGES.md",
+    "asset_manifest": "WEB_ASSETS.json",
+    "deployment_workflow": ".github/workflows/pages.yml",
+    "source_site_version": 5,
+    "controller_training_changed": false
   }
 }

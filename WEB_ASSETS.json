@@ -1,0 +1,94 @@
+{
+  "schema": "mathematics-atlas-web-assets/1",
+  "source_url": "https://mathematics-atlas.przestrze-ro-3365.chatgpt.site",
+  "source_site_version": 5,
+  "source_commit": "d995d6bbae7ea95117a3cac2d4cf91aa443824b0",
+  "recovered_on": "2026-11-04",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 7591,
+      "sha256": "6c35126e1315e08f68e43dffe3a8fe462e975315fb1901811e604925838db4a9"
+    },
+    {
+      "path": "app.mjs",
+      "bytes": 30445,
+      "sha256": "d3b34479a14baca24e5f374cd8b3af04c9e3b359e2e20b44ebe1e09d41d15aba"
+    },
+    {
+      "path": "graph-core.mjs",
+      "bytes": 8033,
+      "sha256": "49cb97021031f569db1e470aa993fe0c84384ae122c48ef0184a600a4baf0376"
+    },
+    {
+      "path": "load-atlas.mjs",
+      "bytes": 2849,
+      "sha256": "5b284583844c9d2a5a285ecb9236e1550f1da02c815477d517fa57c01367fa63"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 21562,
+      "sha256": "7ca8a4ee9340a00f46fd97ccb4834f57f192a9694c6fdcb1526aded3635f3e81"
+    },
+    {
+      "path": "data/atlas.json.gz",
+      "bytes": 12851959,
+      "sha256": "9493bcc383f1ece4cc4768e8d4da6f2bb619aa5729c8d0158fd2425ea348abbb"
+    },
+    {
+      "path": "data/expressions.ndjson.gz",
+      "bytes": 9195734,
+      "sha256": "11eec589f67755a7a11be850efb1888ccf72590e370f2fc39677a3f91d001475"
+    },
+    {
+      "path": "data/mathematics-atlas-dataset.zip",
+      "bytes": 26091364,
+      "sha256": "881459805e8c04d05f5cd143063ed0f4ef24df9e2b8c519310ae1dba2763507b"
+    },
+    {
+      "path": "data/mathematics-atlas-source.zip",
+      "bytes": 82056,
+      "sha256": "f15e417c5a81729b142eed257b1ebab15a69bdae67eadbde04f3d351bd7a5d47"
+    },
+    {
+      "path": "data/mathematics-atlas-replay-pilot.zip",
+      "bytes": 1314868,
+      "sha256": "39b85d8817ed52dba3e897c773d650de6bbae9dd2d5a71fd42d69c35fc954808"
+    },
+    {
+      "path": "data/verification.json",
+      "bytes": 7193,
+      "sha256": "8bcb850bc9504176e023b794384cdb08ade4aed46472b22e9ef6d1d0ba66580f"
+    },
+    {
+      "path": "data/training-manifest.json",
+      "bytes": 931,
+      "sha256": "9d7b2b2d1e2b6abf0f5b573852b35a489d8ca35c3e7f4fec9cf47bf08539b3de"
+    },
+    {
+      "path": "data/SCHEMA.md",
+      "bytes": 12486,
+      "sha256": "26945443c134febd3e2fb5a7f583b57617a0a63436c1723ae844a60c53235792"
+    },
+    {
+      "path": "data/NOTICE.md",
+      "bytes": 1656,
+      "sha256": "199f85dfa8d675c6fd2863467f9e0ad081265cb5f4fa7b440011c5d2d1c0f488"
+    },
+    {
+      "path": "data/replay-pilot/README.md",
+      "bytes": 6172,
+      "sha256": "b0f51d9b7738a74d4af682d56d4511ff82de033d197f53f2d53e795cf6fd0812"
+    },
+    {
+      "path": "data/replay-pilot/verification.json",
+      "bytes": 1878,
+      "sha256": "b691e98e784238d61379dcf8e2ec1a74b26c2db77071468485fccb59de930fed"
+    },
+    {
+      "path": "data/replay-pilot/CheckedProof.lean",
+      "bytes": 15107,
+      "sha256": "239a7eb5edad218ede17b6dbbbd32ce631064878ae477a37d5700e4eca08a1fd"
+    }
+  ]
+}

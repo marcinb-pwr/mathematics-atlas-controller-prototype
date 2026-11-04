@@ -7,15 +7,17 @@ import {loadAtlas, ATLAS_DATA_URL} from '../dist/load-atlas.mjs';
 
 const data=JSON.parse(gunzipSync(readFileSync(new URL('../dist/data/atlas.json.gz',import.meta.url))).toString());
 
-test('every node and proof can be inspected without network access',t=>{
+test('every node and proof resolves to its bundled declaration without network access',t=>{
   const network=t.mock.method(globalThis,'fetch',()=>{throw new Error('Network unavailable');});
-  const graph=new AtlasGraph(data),shards=new Map();
+  const graph=new AtlasGraph(data);
   for(const n of data.nodes){
     const record=graph.declaration(n.id);
     if(n.kind==='concept'){assert.equal(record,null);continue;}
-    if(!shards.has(n.detailShard))shards.set(n.detailShard,JSON.parse(readFileSync(new URL(`../dist/data/${n.detailShard}`,import.meta.url),'utf8')));
-    const original=shards.get(n.detailShard)[n.statementId||n.id];
-    assert.deepEqual(record,original,`Unchanged details for ${n.id}`);
+    // Separate detail shards are no longer shipped. verify_web_assets.py checks
+    // these bundled records independently against the raw export in the ZIP.
+    const original=data.declarations[n.statementId||n.id];
+    assert(original,`Bundled declaration exists for ${n.id}`);
+    assert.equal(record,original,`Correct bundled details for ${n.id}`);
   }
   assert.equal(network.mock.callCount(),0);
   assert.equal(Object.keys(data.declarations).length,data.metadata.declaration_count);
